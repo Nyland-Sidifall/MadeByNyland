@@ -66,6 +66,26 @@ const LandingPage = ({
             <Button className="grow" onClick={contactMeScroll}>
               Contact Me
             </Button>
+            <Button
+              className="grow"
+              onClick={(e) => {
+                e.preventDefault();
+                window.location.href =
+                  "https://silver-beijinho-6ae73d.netlify.app/";
+              }}
+            >
+              DEMO - Girl Tech Geek
+            </Button>
+            <Button
+              className="grow"
+              onClick={(e) => {
+                e.preventDefault();
+                window.location.href =
+                  "https://preeminent-maamoul-7bec8d.netlify.app/";
+              }}
+            >
+              DEMO - 3D Three.js
+            </Button>
           </div>
           <div class="fl w-40">
             <Image src={require("../Assets/me.png")} alt="Can't see me lol" />
