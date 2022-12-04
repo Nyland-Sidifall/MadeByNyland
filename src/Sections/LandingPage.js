@@ -2,6 +2,7 @@ import React from "react";
 import "tachyons";
 import styled from "styled-components";
 import { Button, Divider, H1, H2 } from "../Components/SiteComponents";
+import Space from "./Space";
 
 const Image = styled.img`
   object-fit: fill;
@@ -88,7 +89,11 @@ const LandingPage = ({
             </Button>
           </div>
           <div class="fl w-40">
-            <Image src={require("../Assets/me.png")} alt="Can't see me lol" />
+            {false ? (
+              <Space className="-z-50" />
+            ) : (
+              <Image src={require("../Assets/me.png")} alt="Can't see me lol" />
+            )}
           </div>
         </div>
       </div>
