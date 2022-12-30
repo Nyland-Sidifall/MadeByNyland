@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, EffectFlip, Pagination } from "swiper";
 import { H1, H3 } from "../Components/SiteComponents";
 import { BsChevronDoubleRight, BsChevronDoubleLeft } from "react-icons/bs";
-import { AboutMeData } from "../data/AboutMeData";
+import { AboutMeData } from "../Constants/AboutMeData";
 
 import "tachyons";
 import styled from "styled-components";

@@ -1,7 +1,7 @@
 import React, { forwardRef } from "react";
 import "tachyons";
 import { Image, Divider, H2, H1 } from "../Components/SiteComponents";
-import { WhatIveDoneData } from "../data/WhatIveDoneData";
+import { WhatIveDoneData } from "../Constants/WhatIveDoneData";
 
 const WhatIveDone = forwardRef((props, ref) => {
   const WhatIveDoneList = WhatIveDoneData.map((user, i) => {
