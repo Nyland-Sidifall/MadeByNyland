@@ -93,6 +93,6 @@ export const AboutMeData = [
     picture_soruce_2: "../Assets/AboutMe/programmer.png",
     header_text: "The Goal is Knowledge and Growth",
     paragraph_text:
-      "My goal is to reinforce my skills as a full-stack developer and designer. This year for me is the year of design and development",
+      "My goal is to reinforce my skills as a full-stack developer and designer. This year for me is the year of design and development.",
   },
 ];
