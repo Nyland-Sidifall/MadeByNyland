@@ -1,4 +1,4 @@
-import React, { Fragment, useState, forwardRef, useEffect } from "react";
+import React, { Fragment, useState, forwardRef } from "react";
 import ProjectsModal from "../Components/ProjectsModal";
 import { MyProjectsData } from "../Constants/MyProjectsData";
 
@@ -9,18 +9,6 @@ const NewMyProjectsPage = forwardRef((props, ref) => {
   const [link, setLink] = useState(``);
 
   const [showModal, setShowModal] = useState(false);
-
-  const [posts, setPosts] = useState([]);
-  const [currentPage, setCurrentPage] = useState(1);
-  const [postsPerPage, setPostsPerPage] = useState(6);
-
-  useEffect(() => {
-    setPosts(ProjectList);
-  }, []);
-
-  const indexOfLastPost = currentPage * postsPerPage;
-  const indexOfFirstPost = indexOfLastPost - postsPerPage;
-  const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost);
 
   const ProjectList = MyProjectsData.map((user, i) => {
     return (
