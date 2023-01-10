@@ -1,10 +1,22 @@
-import React, { Fragment } from "react";
+import React, { forwardRef } from "react";
 import Button from "../Components/Button.jsx";
-import navLinks from "../Constants/links";
 import { FaLinkedin } from "react-icons/fa";
 import { AiFillGithub } from "react-icons/ai";
 
-const NewLandingPage = () => {
+const NewLandingPage = ({ aboutMeRef, myProjectsRef, contactMeRef }) => {
+  const aboutMeScroll = (e) => {
+    e.preventDefault();
+    aboutMeRef.current.scrollIntoView({ behavior: "smooth" });
+  };
+  const myProjectScroll = (e) => {
+    e.preventDefault();
+    myProjectsRef.current.scrollIntoView({ behavior: "smooth" });
+  };
+  const contactMeScroll = (e) => {
+    e.preventDefault();
+    contactMeRef.current.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <section className="bg-gradient-to-b from-[#1d191f] to-[#897c8f]">
       <div className="grid grid-cols-3">
@@ -32,8 +44,8 @@ const NewLandingPage = () => {
       </div>
 
       <div>
-        <div className="absolute z-[0] w-[30%] h-[35%] top-0 blue__gradient"></div>
-        <div className="absolute z-[1] w-[40%] h-[40%] right-10 rounded-full top-0 white__gradient"></div>
+        <div className="absolute z-[0] w-[30%] h-[35%] top-0 blue__gradient "></div>
+        <div className="absolute z-[0] w-[40%] h-[40%] right-10 rounded-full top-0 white__gradient"></div>
         <div className="absolute z-[0] w-[50%] h-[50%] right-30 bottom-30 rounded-full top-0 green__gradient"></div>
         <div className="absolute z-[0] w-[30%] h-[25%] right-60 bottom-60 rounded-full top-0 yellow__gradient"></div>
         <div className="absolute z-[0] w-[20%] h-[35%] right-20 bottom-20 top-0 pink__gradient"></div>
@@ -48,16 +60,20 @@ const NewLandingPage = () => {
 
       {/* Buttons List */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 content-center p-10">
-        {navLinks.map((nav) => (
-          <div key={nav.key} className="p-5 flex flex-col items-center">
-            <Button key={nav.key} text={nav.title} />
-          </div>
-        ))}
+        <div className="p-5 flex flex-col items-center">
+          <Button text={"About Me"} onClick={aboutMeScroll} />
+        </div>
+        <div className="p-5 flex flex-col items-center">
+          <Button text={"My Projects"} onClick={myProjectScroll} />
+        </div>
+        <div className="p-5 flex flex-col items-center">
+          <Button text={"Contact Me"} onClick={contactMeScroll} />
+        </div>
       </div>
       <div className="flex flex-col items-center">
         <div className="grid grid-cols-2">
           <FaLinkedin
-            className="text-white text-5xl hover:cursor-pointer transition-all ease-in-out duration-200 hover:scale-110"
+            className="text-white text-7xl hover:cursor-pointer transition-all ease-in-out duration-200 hover:scale-110"
             onClick={(e) => {
               e.preventDefault();
               window.location.href =
@@ -65,7 +81,7 @@ const NewLandingPage = () => {
             }}
           />
           <AiFillGithub
-            className="text-white text-5xl hover:cursor-pointer transition-all ease-in-out duration-200 hover:scale-110"
+            className="text-white text-7xl hover:cursor-pointer transition-all ease-in-out duration-200 hover:scale-110"
             onClick={(e) => {
               e.preventDefault();
               window.location.href = "https://github.com/Nyland-Sidifall";

@@ -1,21 +1,62 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useState, forwardRef, useEffect } from "react";
 import ProjectsModal from "../Components/ProjectsModal";
 import { MyProjectsData } from "../Constants/MyProjectsData";
 
-const NewMyProjectsPage = () => {
+const NewMyProjectsPage = forwardRef((props, ref) => {
+  const [image, setImage] = useState(``);
+  const [header, setHeader] = useState(``);
+  const [body, setBody] = useState(``);
+  const [link, setLink] = useState(``);
+
   const [showModal, setShowModal] = useState(false);
+
+  const [posts, setPosts] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage, setPostsPerPage] = useState(6);
 
-  const lastPostIndex = currentPage * postsPerPage;
-  const firstPostIndex = lastPostIndex - postsPerPage;
-  //add data const currentPost = AboutMeData.slice(firstPostIndex, lastPostIndex)
+  useEffect(() => {
+    setPosts(ProjectList);
+  }, []);
+
+  const indexOfLastPost = currentPage * postsPerPage;
+  const indexOfFirstPost = indexOfLastPost - postsPerPage;
+  const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost);
+
+  const ProjectList = MyProjectsData.map((user, i) => {
+    return (
+      <div
+        className="flex flex-col items-center justify-center p-4 max-w-sm transition-all ease-in-out duration-200 hover:scale-110 hover:scale-200"
+        onClick={() => {
+          setImage(`${MyProjectsData[i].picture_source}`);
+          setHeader(`${MyProjectsData[i].header_text}`);
+          setBody(`${MyProjectsData[i].paragraph_text}`);
+          setLink(`${MyProjectsData[i].url}`);
+          setShowModal(true);
+        }}
+        key={i}
+      >
+        <img
+          className="rounded-[27px] pb-2"
+          src={`${MyProjectsData[i].picture_source}`}
+          alt="ProjectImage"
+        />
+        <div className="bg-[#E1CFCF] rounded-[22px] window__shadow p-4">
+          <p className="font-display font-semibold text-center text-sm md:text-md">
+            {MyProjectsData[i].header_text}
+          </p>
+        </div>
+      </div>
+    );
+  });
 
   return (
     <Fragment>
-      <section className="bg-gradient-to-b from-[#5E5263] to-[#2b262d] pt-12 h-full">
+      <section
+        className="bg-gradient-to-b from-[#5E5263] to-[#2b262d] pt-12 h-full"
+        ref={ref}
+      >
         <div className="grid place-items-center">
-          <h1 className="font-display text-6xl font-semibold text-white">
+          <h1 className="font-display text-6xl font-semibold text-white pb-4">
             My Projects
           </h1>
         </div>
@@ -50,21 +91,7 @@ const NewMyProjectsPage = () => {
                   </div>
 
                   <div className="grid grid-cols-1 grid-rows-2 md:grid-cols-3 md:grid-rows-2 gap-2 col-span-8 window__container m-6">
-                    <div
-                      className="flex flex-col items-center justify-center p-4 max-w-sm transition-all ease-in-out duration-200 hover:scale-110 hover:scale-200"
-                      onClick={() => setShowModal(true)}
-                    >
-                      <img
-                        className=" rounded-[22px] pb-2"
-                        src={require("../Assets/AboutMeAssets/Trees.png")}
-                        alt="Trees"
-                      />
-                      <div className="bg-[#E1CFCF] rounded-[22px] window__shadow p-4">
-                        <p className="font-display text-md font-semibold text-black">
-                          Fake Text Here First
-                        </p>
-                      </div>
-                    </div>
+                    {ProjectList}
                   </div>
 
                   <div className="col-span-1 relative">
@@ -95,9 +122,13 @@ const NewMyProjectsPage = () => {
       <ProjectsModal
         isVisible={showModal}
         onClose={() => setShowModal(false)}
+        modalImage={image}
+        modalHeader={header}
+        modalBodyText={body}
+        projectLink={link}
       />
     </Fragment>
   );
-};
+});
 
 export default NewMyProjectsPage;
