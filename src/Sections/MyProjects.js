@@ -8,7 +8,7 @@ import {
   H3,
   P,
 } from "../Components/SiteComponents";
-import { MyProjectsData } from "../data/MyProjectsData";
+import { MyProjectsData } from "../Constants/MyProjectsData";
 
 const MyProjects = forwardRef((props, ref) => {
   const ProjectList = MyProjectsData.map((user, i) => {

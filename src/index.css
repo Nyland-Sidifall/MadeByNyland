@@ -1,13 +1,110 @@
+html {
+  background-color: black;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+/*Glass Effect*/
+.glass {
+  background: linear-gradient(
+    179.98deg,
+    #cc6464,
+    rgba(134, 46, 35, 0.768) 48.18%,
+    rgba(134, 47, 35, 0) 48.18%
+  );
+  box-shadow: inset -6px 6px 4px rgba(255, 203, 203, 0.25),
+    inset 6px -6px 4px rgba(15, 7, 7, 0.25);
+  backdrop-filter: blur(4px);
+}
+
+.glass2 {
+  background: rgba(204, 100, 100, 0.76);
+  box-shadow: inset -6px 6px 4px rgba(255, 203, 203, 0.25),
+    inset 6px -6px 4px rgba(15, 7, 7, 0.25);
+  backdrop-filter: blur(11px);
+}
+
+/*Border Shadows*/
+.window__shadow {
+  box-shadow: inset -6px 6px 4px rgba(255, 203, 203, 0.526),
+    inset 6px -6px 4px rgba(15, 7, 7, 0.415);
+  backdrop-filter: blur(4px);
+}
+
+.window__button__shadow {
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25),
+    inset 2px -1px 4px rgba(0, 0, 0, 0.25);
+}
+
+.window__container {
+  box-sizing: border-box;
+
+  box-shadow: inset 2px 2px 4px rgba(255, 255, 255, 0);
+  border-radius: 22px;
+
+  border: 16px solid;
+  border-color: rgba(255, 255, 255, 0.475);
+
+  border-image-source: linear-gradient(
+      120.28deg,
+      rgba(232, 221, 221, 0.42) -6.1%,
+      rgba(237, 158, 158, 0.42) 30.74%
+    ),
+    linear-gradient(
+      120.28deg,
+      rgba(232, 221, 221, 0.42) -6.1%,
+      rgba(237, 158, 158, 0.42) 30.74%
+    );
+}
+
+.button__shadow {
+  box-shadow: inset -6px 6px 4px rgba(255, 203, 203, 0.17),
+    inset 6px -6px 4px rgba(15, 7, 7, 0.251);
+}
+
+/*Gradients*/
+
+.blue__gradient {
+  background: linear-gradient(180deg, rgba(188, 165, 255, 0) 0%, #214d76 100%);
+  filter: blur(123px);
+}
+
+.pink__gradient {
+  background: linear-gradient(90deg, #f4c4f3 0%, #fc67fa 100%);
+  filter: blur(900px);
+}
+
+.green__gradient {
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    #80a3ff 0%,
+    rgba(41, 206, 77, 0.821) 100%
+  );
+  filter: blur(900px);
+}
+
+.yellow__gradient {
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    #fcff80 0%,
+    rgba(230, 167, 49, 0.646) 100%
+  );
+  filter: blur(900px);
+}
+
+.white__gradient {
+  background: rgba(255, 255, 255, 0.6);
+  filter: blur(750px);
 }

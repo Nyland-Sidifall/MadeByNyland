@@ -1,41 +1,39 @@
 import React, { useRef } from "react";
 import "./App.css";
-import "tachyons";
-import styled from "styled-components";
 
-import LandingPage from "../Sections/LandingPage";
-import AboutMe from "../Sections/AboutMe";
-import WhatIveDone from "../Sections/WhatIveDone";
-import MyProjects from "../Sections/MyProjects";
-import ContactMe from "../Sections/ContactMe";
-import ScrollToTop from "../Components/ScrollToTop";
-
-const BodySection = styled.body`
-  background-color: #e0e5ec;
-`;
+import NewLandingPage from "../Sections/NewLandingPage";
+import NewAboutMePage from "../Sections/NewAboutMePage";
+import NewMyProjectsPage from "../Sections/NewMyProjectsPage";
+import NewContactMePage from "../Sections/NewContactMe";
+import NewHeader from "../Sections/NewHeader";
+import NewFooter from "../Sections/NewFooter";
 
 function App() {
+  const landingPageRef = useRef(null);
   const aboutMeRef = useRef(null);
   const myProjectsRef = useRef(null);
-  const WhatIveDoneRef = useRef(null);
   const contactMeRef = useRef(null);
 
   return (
-    <BodySection className="flex washed-yellow">
-      <div className="fl tc center w-100 pa2">
-        <LandingPage
+    <div className="bg-gradient-to-b from-[#1d191f] to-[#897c8f]">
+      <div className="">
+        <NewHeader
           aboutMeRef={aboutMeRef}
-          WhatIveDoneRef={WhatIveDoneRef}
           myProjectsRef={myProjectsRef}
           contactMeRef={contactMeRef}
         />
-        <AboutMe ref={aboutMeRef} />
-        <WhatIveDone ref={WhatIveDoneRef} />
-        <MyProjects ref={myProjectsRef} />
-        <ContactMe ref={contactMeRef} />
-        <ScrollToTop className="grow" />
+        <NewLandingPage
+          aboutMeRef={aboutMeRef}
+          myProjectsRef={myProjectsRef}
+          contactMeRef={contactMeRef}
+          ref={landingPageRef}
+        />
+        <NewAboutMePage ref={aboutMeRef} />
+        <NewMyProjectsPage ref={myProjectsRef} />
+        <NewContactMePage ref={contactMeRef} />
+        <NewFooter />
       </div>
-    </BodySection>
+    </div>
   );
 }
 
