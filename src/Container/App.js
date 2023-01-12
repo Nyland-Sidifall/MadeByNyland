@@ -2,11 +2,12 @@ import React, { useRef } from "react";
 import "./App.css";
 
 import NewLandingPage from "../Sections/NewLandingPage";
-import NewAboutMePage from "../Sections/NewAboutMePage";
 import NewMyProjectsPage from "../Sections/NewMyProjectsPage";
 import NewContactMePage from "../Sections/NewContactMe";
 import NewHeader from "../Sections/NewHeader";
 import NewFooter from "../Sections/NewFooter";
+import NewAboutMeGrid from "../Sections/NewAboutMeGrid";
+import NewMyProjectsGrid from "../Sections/NewMyProjectsGrid";
 
 function App() {
   const landingPageRef = useRef(null);
@@ -28,7 +29,8 @@ function App() {
           contactMeRef={contactMeRef}
           ref={landingPageRef}
         />
-        <NewAboutMePage ref={aboutMeRef} />
+        <NewAboutMeGrid ref={aboutMeRef} />
+        <NewMyProjectsGrid />
         <NewMyProjectsPage ref={myProjectsRef} />
         <NewContactMePage ref={contactMeRef} />
         <NewFooter />

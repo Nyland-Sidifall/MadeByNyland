@@ -25,7 +25,7 @@ const NewAboutMePage = forwardRef((props, ref) => {
   return (
     <section
       ref={ref}
-      className="bg-gradient-to-b from-[#887F8E] to-[#5e5363] pt-12 h-3/6"
+      className="bg-gradient-to-b from-[#867A8C] to-[#5e5363] pt-12 h-3/6"
     >
       <div className="grid grid-cols-1 md:grid-cols-2">
         <div className="grid place-items-center md:hidden">
@@ -49,6 +49,7 @@ const NewAboutMePage = forwardRef((props, ref) => {
                 <div className="rounded-full bg-[#E1CFCF] h-8 w-11/12 window__button__shadow"></div>
               </div>
             </div>
+
             <div className="">
               <div className="flex flex-col items-center justify-center p-8 ">
                 <img
