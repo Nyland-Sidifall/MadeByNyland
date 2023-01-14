@@ -13,7 +13,7 @@ const NewMyProjectsGrid = forwardRef((props, ref) => {
   const ProjectList = MyProjectsData.map((user, i) => {
     return (
       <div
-        className="flex flex-col items-center justify-center p-4 max-w-sm transition-all ease-in-out duration-200 hover:scale-110 hover:scale-200"
+        className="flex flex-col items-center justify-center p-2 max-w-sm transition-all ease-in-out duration-200 hover:scale-110 hover:scale-200"
         onClick={() => {
           setImage(`${MyProjectsData[i].picture_source}`);
           setHeader(`${MyProjectsData[i].header_text}`);
@@ -24,7 +24,7 @@ const NewMyProjectsGrid = forwardRef((props, ref) => {
         key={i}
       >
         <img
-          className="rounded-[27px] pb-2"
+          className="rounded-[27px] pb-2 h-4/6 md:h-5/6"
           src={`${MyProjectsData[i].picture_source}`}
           alt="ProjectImage"
         />
@@ -40,19 +40,17 @@ const NewMyProjectsGrid = forwardRef((props, ref) => {
   return (
     <Fragment>
       <section
-        className="bg-gradient-to-b from-[#5E5263] to-[#2b262d] pt-12 h-full"
+        className="bg-gradient-to-b from-[#5E5263] to-[#2b262d]  h-full"
         ref={ref}
       >
-        <div className="grid place-items-center">
-          <h1 className="font-display text-6xl font-semibold text-white pb-4">
-            My Projects
-          </h1>
-        </div>
-
-        <div className="grid grid-cols-10 place-items-center">
-          <div className="col-span-1"></div>
-          <div className="col-span-8">
-            <div className="w-full h-full bg-gradient-to-b from-[#CC6464] to-[#862F23] rounded-[44px] window__shadow ">
+        <div className="grid grid-cols-10 place-items-center p-8 md:p-32">
+          <div className="col-start-2 col-span-8">
+            <div className="grid place-items-center pb-10">
+              <h1 className="bottom-4 font-display text-6xl font-semibold text-white">
+                My Projects
+              </h1>
+            </div>
+            <div className="bg-gradient-to-b from-[#CC6464] to-[#862F23] rounded-[44px] window__shadow ">
               <div className="flex flex-row pt-10 pl-10">
                 <div className="pr-4">
                   <div className="rounded-full bg-[#CB3055] h-8 w-8 window__button__shadow"></div>
@@ -68,43 +66,38 @@ const NewMyProjectsGrid = forwardRef((props, ref) => {
                 </div>
               </div>
 
-              <div className="">
-                <div className="grid grid-cols-10 place-content-center">
-                  <div className="col-span-1 relative">
-                    <img
-                      className="transition-all ease-in-out duration-200 hover:scale-110 absolute top-[45%] left-4"
-                      src={require("../Assets/AboutMeAssets/ArrowLeft.png")}
-                      alt="Right Arrow"
-                    />
-                  </div>
-
-                  <div className="grid grid-cols-1 grid-rows-2 md:grid-cols-3 md:grid-rows-2 gap-2 col-span-8 window__container m-6">
-                    {ProjectList}
-                  </div>
-
-                  <div className="col-span-1 relative">
-                    <img
-                      className="transition-all ease-in-out duration-200 hover:scale-110 absolute top-[45%] right-4"
-                      src={require("../Assets/AboutMeAssets/ArrowRight.png")}
-                      alt="Right Arrow"
-                    />
-                  </div>
+              <div className="grid grid-cols-10 place-content-center">
+                <div className="col-span-1 relative">
+                  <img
+                    className="transition-all ease-in-out duration-200 hover:scale-110 absolute top-[45%] left-4"
+                    src={require("../Assets/AboutMeAssets/ArrowLeft.png")}
+                    alt="Right Arrow"
+                  />
                 </div>
 
-                <div className="">
-                  <div className="grid place-content-center">
-                    <div className="flex flex-row pb-5">
-                      <div className="rounded-full bg-[#E3B336] h-8 w-8 window__button__shadow"></div>
-                      <div className="rounded-full bg-[#c79d3498] h-8 w-8 window__button__shadow"></div>
-                      <div className="rounded-full bg-[#c79d3498] h-8 w-8 window__button__shadow"></div>
-                      <div className="rounded-full bg-[#c79d3498] h-8 w-8 window__button__shadow"></div>
-                    </div>
-                  </div>
+                <div className="grid grid-cols-1 grid-rows-2 md:grid-cols-3 md:grid-rows-2 gap-0 md:gap-2 col-span-8 window__container m-6">
+                  {ProjectList}
+                </div>
+
+                <div className="col-span-1 relative">
+                  <img
+                    className="transition-all ease-in-out duration-200 hover:scale-110 absolute top-[45%] right-4"
+                    src={require("../Assets/AboutMeAssets/ArrowRight.png")}
+                    alt="Right Arrow"
+                  />
+                </div>
+              </div>
+
+              <div className="grid place-content-center">
+                <div className="flex flex-row pb-5">
+                  <div className="rounded-full bg-[#E3B336] h-8 w-8 window__button__shadow"></div>
+                  <div className="rounded-full bg-[#c79d3498] h-8 w-8 window__button__shadow"></div>
+                  <div className="rounded-full bg-[#c79d3498] h-8 w-8 window__button__shadow"></div>
+                  <div className="rounded-full bg-[#c79d3498] h-8 w-8 window__button__shadow"></div>
                 </div>
               </div>
             </div>
           </div>
-          <div className="col-span-1"></div>
         </div>
       </section>
       <ProjectsModal

@@ -40,19 +40,19 @@ const ProjectsModal = ({
         </div>
 
         <div className="grid place-items-center pt-6">
-          <div className="grid grid-rows-2 gap-2 place-items-center">
+          <div className="grid place-items-center">
             <div className="flex flex-row">
               <img
-                className=" rounded-[22px] h-60"
+                className=" rounded-[22px] h-52"
                 src={modalImage}
                 alt={"Snapshot of " + modalHeader}
               />
             </div>
             <div className="bg-[#E1CFCF] rounded-[22px] window__shadow m-4 p-2 md:p-8">
-              <p className="font-display text-xl md:text-3xl font-bold text-black text-center pb-4">
+              <p className="font-display text-xl md:text-2xl font-bold text-black text-center pb-4">
                 {modalHeader}
               </p>
-              <p className="font-display text-sm md:text-lg font-semibold text-black text-center">
+              <p className="font-display text-sm md:text-md font-semibold text-black text-center">
                 {modalBodyText}
               </p>
             </div>
