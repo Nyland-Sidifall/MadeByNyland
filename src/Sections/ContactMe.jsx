@@ -1,7 +1,7 @@
 import React, { useRef, useState, forwardRef } from "react";
 import emailjs from "@emailjs/browser";
 
-const NewContactMePage = forwardRef((props, ref) => {
+const ContactMe = forwardRef((props, ref) => {
   const form = useRef();
 
   const [result, showResult] = useState(false);
@@ -151,4 +151,4 @@ const NewContactMePage = forwardRef((props, ref) => {
   );
 });
 
-export default NewContactMePage;
+export default ContactMe;

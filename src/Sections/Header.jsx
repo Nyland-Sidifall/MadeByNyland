@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import MenuModal from "../Components/MenuModal";
 
-const NewHeader = () => {
+const Header = () => {
   const [showModal, setShowModal] = useState(false);
 
   return (
@@ -28,4 +28,4 @@ const NewHeader = () => {
   );
 };
 
-export default NewHeader;
+export default Header;

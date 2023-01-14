@@ -1,6 +1,6 @@
 import React from "react";
 
-const NewFooter = () => {
+const Footer = () => {
   return (
     <nav className="sticky top-0 z-50 after:">
       <div className="flex flex-col relative">
@@ -12,4 +12,4 @@ const NewFooter = () => {
   );
 };
 
-export default NewFooter;
+export default Footer;

@@ -3,7 +3,7 @@ import Button from "../Components/Button.jsx";
 import { FaLinkedin } from "react-icons/fa";
 import { AiFillGithub } from "react-icons/ai";
 
-const NewLandingPage = ({ aboutMeRef, myProjectsRef, contactMeRef }) => {
+const LandingPage = ({ aboutMeRef, myProjectsRef, contactMeRef }) => {
   const aboutMeScroll = (e) => {
     e.preventDefault();
     aboutMeRef.current.scrollIntoView({ behavior: "smooth" });
@@ -93,4 +93,4 @@ const NewLandingPage = ({ aboutMeRef, myProjectsRef, contactMeRef }) => {
   );
 };
 
-export default NewLandingPage;
+export default LandingPage;
