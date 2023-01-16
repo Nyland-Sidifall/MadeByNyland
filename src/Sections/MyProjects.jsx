@@ -1,8 +1,7 @@
-import React, { Fragment, useState, forwardRef } from "react";
+import React, { Fragment, useState, forwardRef, useEffect } from "react";
 import ProjectsModal from "../Components/ProjectsModal";
 import Pagination from "../Components/Pagination";
 import { MyProjectsData } from "../Constants/MyProjectsData";
-import { ReactDOM } from "react-dom";
 
 const MyProjects = forwardRef((props, ref) => {
   const [image, setImage] = useState(``);
@@ -13,7 +12,9 @@ const MyProjects = forwardRef((props, ref) => {
   const [showModal, setShowModal] = useState(false);
 
   let [currentPage, setCurrentPage] = useState(1);
-  const [projectsPerPage, setProjectsPerPage] = useState(6);
+  const [projectsPerPage, setProjectsPerPage] = useState(
+    window.innerWidth <= 767 ? 4 : 6
+  );
 
   const indexOfLastProj = currentPage * projectsPerPage;
   const indexOfFirstProj = indexOfLastProj - projectsPerPage;
@@ -27,7 +28,7 @@ const MyProjects = forwardRef((props, ref) => {
   const projectListSliced = currentProjects.map((data, i) => {
     return (
       <div
-        className="flex flex-col items-center justify-center p-2 max-w-sm transition-all ease-in-out duration-200 hover:scale-110 hover:scale-200"
+        className="flex flex-col items-center justify-center p-0 md:p-2 transition-all ease-in-out duration-200 hover:scale-110 hover:scale-200"
         onClick={() => {
           setImage(`${currentProjects[i].picture_source}`);
           setHeader(`${currentProjects[i].header_text}`);
@@ -38,7 +39,7 @@ const MyProjects = forwardRef((props, ref) => {
         key={i}
       >
         <img
-          className="rounded-[27px] pb-2 h-4/6 md:h-5/6"
+          className="rounded-[42px] md:rounded-[27px] p-4 min-h-max"
           src={`${currentProjects[i].picture_source}`}
           alt="ProjectImage"
         />
@@ -83,12 +84,10 @@ const MyProjects = forwardRef((props, ref) => {
                 </div>
               </div>
 
-              <div className="grid grid-cols-10 place-content-center">
+              <div className="grid grid-cols-10 md:grid-cols-0 col-start- place-content-center">
                 <div className="grid grid-cols-1 col-start-2 grid-rows-2 md:grid-cols-3 md:grid-rows-2 gap-0 md:gap-2 col-span-8 window__container m-6">
                   {projectListSliced}
                 </div>
-
-                <div className="col-span-1 relative"></div>
               </div>
 
               <div className="grid place-content-center">
