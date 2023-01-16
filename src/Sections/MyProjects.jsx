@@ -40,7 +40,7 @@ const MyProjects = forwardRef((props, ref) => {
         key={i}
       >
         <img
-          className="rounded-[42px] md:rounded-[27px] p-4 min-h-max"
+          className="rounded-[42px] md:rounded-[27px] p-4 h-full"
           src={`${currentProjects[i].picture_source}`}
           alt="ProjectImage"
         />
@@ -64,7 +64,7 @@ const MyProjects = forwardRef((props, ref) => {
             <div className="grid place-items-center pb-10">
               <h1
                 ref={ref}
-                className="bottom-4 font-display text-6xl font-semibold text-white"
+                className="bottom-4 font-display text-5xl md:text-6xl font-semibold text-white"
               >
                 My Projects
               </h1>
