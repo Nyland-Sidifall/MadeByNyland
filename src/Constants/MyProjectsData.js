@@ -23,7 +23,7 @@ export const MyProjectsData = [
   },
   {
     id: 4,
-    picture_source: "../Assets/MyProjects/TheKickbackFilm.jpeg",
+    picture_source: "../Assets/MyProjects/TheKickBackFilm.jpeg",
     header_text: "The Kickback Film",
     paragraph_text: "A website for a film set around a college party setting.",
     url: "https://github.com/Nyland-Sidifall/TheKickbackFilm",

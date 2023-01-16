@@ -20,7 +20,7 @@ const Header = () => {
       </div>
       <img
         className="hidden transition-all ease-in-out duration-200 hover:scale-110 absolute top-[45%] right-2"
-        src={require("../Assets/NavBarAssets/HamburgerMenu.png")}
+        src={"../Assets/NavBarAssets/HamburgerMenu.png"}
         alt="Right Arrow"
         onClick={() => setShowModal(true)}
       />
