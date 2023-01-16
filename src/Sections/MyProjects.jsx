@@ -1,4 +1,4 @@
-import React, { Fragment, useState, forwardRef, useEffect } from "react";
+import React, { Fragment, useState, forwardRef } from "react";
 import ProjectsModal from "../Components/ProjectsModal";
 import Pagination from "../Components/Pagination";
 import { MyProjectsData } from "../Constants/MyProjectsData";
