@@ -2,7 +2,7 @@ export const MyProjectsData = [
   {
     id: 1,
     picture_source: "../Assets/MyProjects/MadeByNyland2.jpeg",
-    header_text: "MadeByNyland",
+    header_text: "Made By Nyland",
     paragraph_text: "My Portfolio Website that you're currently using.",
     url: "https://MadebyNy.land",
   },

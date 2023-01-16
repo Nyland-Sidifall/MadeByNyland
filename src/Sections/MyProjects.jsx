@@ -29,7 +29,7 @@ const MyProjects = forwardRef((props, ref) => {
   const projectListSliced = currentProjects.map((data, i) => {
     return (
       <div
-        className="flex flex-col items-center justify-center p-0 md:p-2 transition-all ease-in-out duration-200 hover:scale-110 hover:scale-200"
+        className="grid place-content-center justify-center gap-4  transition-all ease-in-out duration-200 hover:scale-110 hover:scale-200"
         onClick={() => {
           setImage(`${currentProjects[i].picture_source}`);
           setHeader(`${currentProjects[i].header_text}`);
@@ -40,12 +40,12 @@ const MyProjects = forwardRef((props, ref) => {
         key={i}
       >
         <img
-          className="rounded-[28px] md:rounded-[27px] p-4 h-24"
+          className="rounded-[28px] md:rounded-[27px] p-2 h-24 mx-auto"
           src={`${currentProjects[i].picture_source}`}
           alt="ProjectImage"
         />
-        <div className="bg-[#E1CFCF] rounded-[22px] window__shadow p-4">
-          <p className="break-word font-display font-semibold text-center text-sm md:text-md overflow-y-scroll">
+        <div className="bg-[#E1CFCF] rounded-[22px] window__shadow p-1 md:p-3">
+          <p className="font-display font-semibold text-center text-sm md:text-md">
             {currentProjects[i].header_text}
           </p>
         </div>
@@ -86,7 +86,7 @@ const MyProjects = forwardRef((props, ref) => {
               </div>
 
               <div className="grid grid-cols-10 md:grid-cols-0 place-content-center">
-                <div className="grid grid-cols-2 col-start-2 grid-rows-2 md:grid-cols-3 md:grid-rows-2 gap-0 md:gap-2 col-span-8 window__container m-6">
+                <div className="grid grid-cols-2 col-start-2 grid-rows-2 md:grid-cols-3 md:grid-rows-2 gap-0 md:gap-2 col-span-8 window__container m-4">
                   {projectListSliced}
                 </div>
               </div>
