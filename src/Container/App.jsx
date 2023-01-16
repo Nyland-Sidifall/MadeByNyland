@@ -1,12 +1,12 @@
 import React, { useRef } from "react";
 import "./App.css";
 
-import NewLandingPage from "../Sections/NewLandingPage";
-import NewAboutMePage from "../Sections/NewAboutMePage";
-import NewMyProjectsPage from "../Sections/NewMyProjectsPage";
-import NewContactMePage from "../Sections/NewContactMe";
-import NewHeader from "../Sections/NewHeader";
-import NewFooter from "../Sections/NewFooter";
+import LandingPage from "../Sections/LandingPage";
+import ContactMe from "../Sections/ContactMe";
+import Header from "../Sections/Header";
+import Footer from "../Sections/Footer";
+import AboutMe from "../Sections/AboutMe";
+import MyProjects from "../Sections/MyProjects";
 
 function App() {
   const landingPageRef = useRef(null);
@@ -17,21 +17,21 @@ function App() {
   return (
     <div className="bg-gradient-to-b from-[#1d191f] to-[#897c8f]">
       <div className="">
-        <NewHeader
+        <Header
           aboutMeRef={aboutMeRef}
           myProjectsRef={myProjectsRef}
           contactMeRef={contactMeRef}
         />
-        <NewLandingPage
+        <LandingPage
           aboutMeRef={aboutMeRef}
           myProjectsRef={myProjectsRef}
           contactMeRef={contactMeRef}
           ref={landingPageRef}
         />
-        <NewAboutMePage ref={aboutMeRef} />
-        <NewMyProjectsPage ref={myProjectsRef} />
-        <NewContactMePage ref={contactMeRef} />
-        <NewFooter />
+        <AboutMe ref={aboutMeRef} />
+        <MyProjects ref={myProjectsRef} />
+        <ContactMe ref={contactMeRef} />
+        <Footer />
       </div>
     </div>
   );

@@ -1,7 +1,7 @@
 import React, { useRef, useState, forwardRef } from "react";
 import emailjs from "@emailjs/browser";
 
-const NewContactMePage = forwardRef((props, ref) => {
+const ContactMe = forwardRef((props, ref) => {
   const form = useRef();
 
   const [result, showResult] = useState(false);
@@ -35,15 +35,15 @@ const NewContactMePage = forwardRef((props, ref) => {
           <div className="flex flex-row">
             <img
               className=" w-md h-56 md:w-lg md:h-96 animate-hover_slowest "
-              src={require("../Assets/ContactMeAssets/ContactMeSphere.png")}
+              src={"../ControlAssets/ContactMeAssets/ContactMeSphere.png"}
               alt="Sphere"
             />
           </div>
         </div>
 
-        <div className="flex flex-col items-center justify-center m-20">
+        <div className="grid place-content-center py-8">
           <form ref={form} onSubmit={sendEmail}>
-            <div className="w-fit h-11/12 bg-gradient-to-b from-[#CC6464] to-[#862F23] rounded-[44px] window__shadow ">
+            <div className="bg-gradient-to-b from-[#CC6464] to-[#862F23] rounded-[44px] window__shadow ">
               <div className="flex flex-row p-10">
                 <div className="pr-4">
                   <div className="rounded-full bg-[#CB3055] h-8 w-8 window__button__shadow"></div>
@@ -59,7 +59,7 @@ const NewContactMePage = forwardRef((props, ref) => {
                 </div>
               </div>
 
-              <div className="w-max h-max">
+              <div className="grid grid-col-1">
                 <div className="p-2">
                   <label
                     for="name"
@@ -151,4 +151,4 @@ const NewContactMePage = forwardRef((props, ref) => {
   );
 });
 
-export default NewContactMePage;
+export default ContactMe;
