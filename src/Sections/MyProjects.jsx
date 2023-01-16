@@ -40,7 +40,7 @@ const MyProjects = forwardRef((props, ref) => {
         key={i}
       >
         <img
-          className="rounded-[42px] md:rounded-[27px] p-4 h-full"
+          className="rounded-[28px] md:rounded-[27px] p-4 h-24"
           src={`${currentProjects[i].picture_source}`}
           alt="ProjectImage"
         />
@@ -56,11 +56,11 @@ const MyProjects = forwardRef((props, ref) => {
   return (
     <Fragment>
       <section
-        className="bg-gradient-to-b from-[#5E5263] to-[#2b262d]  h-full"
+        className="bg-gradient-to-b from-[#5E5263] to-[#2b262d]"
         ref={ref}
       >
-        <div className="grid grid-cols-10 place-items-center p-8 md:p-20 lg:p-64">
-          <div className="col-start-2 col-span-8">
+        <div className="grid grid-cols-1 md:grid-cols-10 place-items-center p-8 md:p-20 lg:p-64">
+          <div className="col-start-0 md:col-start-2 col-span-full md:col-span-8">
             <div className="grid place-items-center pb-10">
               <h1
                 ref={ref}
@@ -69,7 +69,7 @@ const MyProjects = forwardRef((props, ref) => {
                 My Projects
               </h1>
             </div>
-            <div className="bg-gradient-to-b from-[#CC6464] to-[#862F23] rounded-[44px] window__shadow ">
+            <div className="bg-gradient-to-b from-[#CC6464] to-[#862F23] rounded-[44px] window__shadow">
               <div className="flex flex-row pt-10 pl-10">
                 <div className="pr-4">
                   <div className="rounded-full bg-[#CB3055] h-8 w-8 window__button__shadow"></div>
@@ -85,8 +85,8 @@ const MyProjects = forwardRef((props, ref) => {
                 </div>
               </div>
 
-              <div className="grid grid-cols-10 md:grid-cols-0 col-start- place-content-center">
-                <div className="grid grid-cols-1 col-start-2 grid-rows-2 md:grid-cols-3 md:grid-rows-2 gap-0 md:gap-2 col-span-8 window__container m-6">
+              <div className="grid grid-cols-10 md:grid-cols-0 place-content-center">
+                <div className="grid grid-cols-2 col-start-2 grid-rows-2 md:grid-cols-3 md:grid-rows-2 gap-0 md:gap-2 col-span-8 window__container m-6">
                   {projectListSliced}
                 </div>
               </div>
