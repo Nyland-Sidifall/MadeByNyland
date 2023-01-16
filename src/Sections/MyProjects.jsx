@@ -12,6 +12,7 @@ const MyProjects = forwardRef((props, ref) => {
   const [showModal, setShowModal] = useState(false);
 
   let [currentPage, setCurrentPage] = useState(1);
+  // eslint-disable-next-line no-unused-vars
   const [projectsPerPage, setProjectsPerPage] = useState(
     window.innerWidth <= 767 ? 4 : 6
   );
