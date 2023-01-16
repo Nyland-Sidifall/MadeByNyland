@@ -102,20 +102,20 @@ const AboutMe = forwardRef((props, ref) => {
           <div className="row-span-2  flex justify-center ">
             <img
               className="animate-hover_slowest"
-              src={"../src/Assets/AboutMeAssets/Platform.png"}
+              src={"../ControlAssets/AboutMeAssets/Platform.png"}
               alt="Platform"
             />
           </div>
           <div className="row-span-2 flex justify-center pt-4">
             <img
               className="transition-all ease-in-out duration-200 hover:scale-110 pr-8 md:pr-4"
-              src={"../src/Assets/AboutMeAssets/ArrowLeft.png"}
+              src={"../ControlAssets/AboutMeAssets/ArrowLeft.png"}
               alt="Left Arrow"
               onClick={decIndex}
             />
             <img
               className="transition-all ease-in-out duration-200 hover:scale-110 pl-8 md:pl-4"
-              src={"../src/Assets/AboutMeAssets/ArrowRight.png"}
+              src={"../ControlAssets/AboutMeAssets/ArrowRight.png"}
               alt="Right Arrow"
               onClick={incIndex}
             />

@@ -23,21 +23,21 @@ const LandingPage = ({ aboutMeRef, myProjectsRef, contactMeRef }) => {
         <div className="flex flex-col items-center justify-center">
           <img
             className="animate-hover_slow w-[60%] h-[60%] relative z-[2]"
-            src={"../src/Assets/LandingPageAssets/ship.png"}
+            src={"../ControlAssets/LandingPageAssets/ship.png"}
             alt="Ship"
           />
         </div>
         <div className="flex flex-col items-center justify-center">
           <img
             className="w-[100%] h-[100%] relative z-[2] animate-hover"
-            src={"../src/Assets/LandingPageAssets/CoderPlanet.png"}
+            src={"../ControlAssets/LandingPageAssets/CoderPlanet.png"}
             alt="Planet Coder"
           />
         </div>
         <div className="flex flex-col items-center justify-center">
           <img
             className="animate-hover_slowest w-[60%] h-[60%] relative z-[2]"
-            src={"../src/Assets/LandingPageAssets/planet.png"}
+            src={"../ControlAssets/LandingPageAssets/planet.png"}
             alt="Ship"
           />
         </div>

@@ -35,7 +35,7 @@ const ContactMe = forwardRef((props, ref) => {
           <div className="flex flex-row">
             <img
               className=" w-md h-56 md:w-lg md:h-96 animate-hover_slowest "
-              src={"../src/Assets/ContactMeAssets/ContactMeSphere.png"}
+              src={"../ControlAssets/ContactMeAssets/ContactMeSphere.png"}
               alt="Sphere"
             />
           </div>
