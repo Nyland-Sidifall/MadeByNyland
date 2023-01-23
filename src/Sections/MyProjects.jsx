@@ -29,7 +29,7 @@ const MyProjects = forwardRef((props, ref) => {
   const projectListSliced = currentProjects.map((data, i) => {
     return (
       <div
-        className="grid place-content-center justify-center gap-4  transition-all ease-in-out duration-200 hover:scale-110 hover:scale-200"
+        className="grid place-content-center justify-center gap-4 transition-all ease-in-out duration-200 hover:scale-110 hover:scale-200"
         onClick={() => {
           setImage(`${currentProjects[i].picture_source}`);
           setHeader(`${currentProjects[i].header_text}`);
